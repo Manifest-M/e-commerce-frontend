@@ -5,10 +5,12 @@ import ProductDetail from './pages/ProductDetail'
 import Products from './pages/Products'
 
 function App() {
+  // bg-gray-100 gives a neutral background for the white cards to stand out, typical for Amazon content areas
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
       <Header />
-      <main className="flex-grow p-4 md:p-8 max-w-7xl mx-auto w-full">
+      {/* Remove padding and max-width from main tag, let inner components handle it. */}
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
